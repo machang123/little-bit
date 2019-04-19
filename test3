@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int year;
+	for (year = 1000; year <= 2000; year++)
+	{
+		if (year % 400 == 0)//世纪年能整除400的是闰年。
+			
+		{
+			printf("%d ", year);
+		}
+		else if (year % 4 == 0 && year % 100 != 0)//普通年能整除4且不能整除100的为闰年。
+		{
+			printf("%d ", year);
+		}
+	}
+	system("pause");
+	return 0;
+}
