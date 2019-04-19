@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+main()
+{
+	int i=0, j=0;
+	for (i = 1; i <= 9; i++)//循环计算1~9
+	{
+		for (j = 1; j <= i; j++)//输出数i的i个乘法项
+		{
+			printf("%d*%d=%d ", i, j, i*j);
+		}
+		printf("\n");//输出换行符
+		system("pause");
+	}
+}
