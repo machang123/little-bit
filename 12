@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+		for (int x = 1; x<8; x++) 
+{
+		for (int y = 1; y <= 2 * x - 1; y++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	for (int x = 6; x>0; x--) 
+	{
+		for (int y = 1; y <= 2 * x - 1; y++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	system("pause");
+	return 0;
+}
