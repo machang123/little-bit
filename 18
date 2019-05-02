@@ -1,0 +1,25 @@
+#define   _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+	char ch;
+	char Str;
+	printf("请输入一个字符或字符串：\n");
+	while ((ch = getchar()) != EOF) {    //getchar()键盘获取字符串
+		if ('a' <= ch && ch <= 'z') {
+			putchar(ch - 32);       //putchar()输出字符串
+			printf("\n");
+		}
+		if ('A' <= ch && ch <= 'Z') {
+			putchar(ch + 32);
+			printf("\n");
+		}
+		else {
+
+		}
+	}
+	system("pause");
+	return 0;
+}
