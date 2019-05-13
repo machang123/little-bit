@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+
+void mul_table(int x)
+{
+	int i = 0, j = 0;
+	for (i = 1; i <= x; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			printf("%d*%d=%-2d ", j, i, i*j);
+		}
+		printf("\n");
+	}
+}
+
+
+int main()
+{
+	int x = 0;
+	printf("输入要打印乘法表的行数：\n");
+	scanf("%d", &x);
+	mul_table(x);
+
+	system("pause");
+	return 0;
+}
+
