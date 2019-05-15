@@ -1,0 +1,40 @@
+//递归和非递归分别实现求n的阶乘 
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<windows.h>
+#include<stdlib.h>
+
+int  D_N(int n)  //递归
+{
+	if (n == 1)
+	{
+		return 1;
+	}
+	return n * D_N(n - 1);
+}
+
+int FD_N(int n) //非递归
+{
+	int sum = 1;
+	for (; n > 0; n--)
+	{
+		sum *= n;
+	}
+	return sum;
+}
+int main()
+{
+	int n = 0;
+	printf("请输入n:");
+	scanf("%d", &n);
+	int DS = 0;
+	int FDS = 0;
+	DS = D_N(n);
+	FDS = FD_N(n);
+	printf("递归结果：%d\n", DS);
+	printf("非递归结果：%d\n", FDS);
+
+	system("pause");
+	return 0;
+}
