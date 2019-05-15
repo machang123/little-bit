@@ -1,0 +1,22 @@
+int mul(int n,int k)
+{
+	if (k == 0)
+		return 1;
+	else if (k == 1)
+		return n;
+	else
+		return n * mul(n,k - 1);
+}
+		
+
+
+int main()
+{
+	int n = 0;
+	int k = 0;
+	scanf("%d%d", &n,&k);
+	printf("%d", mul(n,k));
+
+	system("pause");
+	return 0;
+}
