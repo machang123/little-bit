@@ -1,0 +1,62 @@
+//递归方法计算第n个斐波那契数列的值
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int fib(int x)
+{
+	int result = 0;
+	if (x > 2)
+		return result = fib(x - 1) + fib(x - 2);
+	else
+		return 1;
+}
+
+
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	printf("%d", fib(n));
+
+	system("pause");
+	return 0;
+}
+
+
+//非递归（迭代循环）方法计算第n个斐波那契数列的值
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int fib(int x)
+{
+	int a;
+	int b;
+	int c;
+
+	a = b = 1;
+	while (x > 2)
+	{
+		x -= 1;
+		c = b;
+		b = a;
+		a = c + b;
+	}
+		return a;
+}
+
+
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	printf("%d", fib(n));
+
+	system("pause");
+	return 0;
+}
